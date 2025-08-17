@@ -61,3 +61,11 @@ let product = {
 
 product.finalPrice = 30;
 console.log(product.finalPrice);
+
+
+function ordenar(text, fn){
+    const array = text.split("").sort().filter( p => p.trim()).join("");
+    return fn(array);
+};
+
+ordenar("hola mundo", console.log)
